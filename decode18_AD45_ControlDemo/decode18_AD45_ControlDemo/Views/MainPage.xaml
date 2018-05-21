@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode18_AD45_ControlDemo.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:decode18_AD45_ControlDemo">
+
+    <StackLayout>
+        <Button
+            x:Name="btnCustomEditor"
+            Clicked="btnCustomEditor_Clicked"
+            Text="Custom Editor" />
+        <Button
+            x:Name="btnVertionInfo"
+            Clicked="btnVertionInfo_Clicked"
+            Text="Vertion Info" />
+        <Button
+            x:Name="btnNoHighlightListViewPage"
+            Clicked="btnNoHighlightListViewPage_Clicked"
+            Text="No Highlight ListView" />
+    </StackLayout>
+
+</ContentPage>

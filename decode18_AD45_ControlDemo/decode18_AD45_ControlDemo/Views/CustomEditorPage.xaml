@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode18_AD45_ControlDemo.Views.CustomEditorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:decode18_AD45_ControlDemo.Behaviors;assembly=decode18_AD45_ControlDemo"
+    xmlns:controls="clr-namespace:decode18_AD45_ControlDemo.Controls"
+    Title="CustomEditor">
+    <ContentPage.Content>
+        <StackLayout>
+            <Editor Margin="20" HeightRequest="150" />
+            <controls:CustomEditor
+                Margin="20"
+                BorderColor="Black"
+                HeightRequest="150">
+                <controls:CustomEditor.Behaviors>
+                    <behaviors:MaxLengthBehavior MaxLength="10" />
+                </controls:CustomEditor.Behaviors>
+            </controls:CustomEditor>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

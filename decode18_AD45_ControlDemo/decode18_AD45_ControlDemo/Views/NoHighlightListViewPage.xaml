@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode18_AD45_ControlDemo.Views.NoHighlightListViewPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="NoHighlightList">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <ListView
+            x:Name="lst1"
+            HorizontalOptions="FillAndExpand"
+            ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label
+                                Margin="10,0,0,0"
+                                FontSize="Large"
+                                Text="{Binding}"
+                                TextColor="#0078D7"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView
+            x:Name="lst2"
+            Grid.Column="1"
+            HorizontalOptions="FillAndExpand"
+            ItemSelected="ListView_ItemSelected">
+            <ListView.Effects>
+                <Effect x:FactoryMethod="Resolve">
+                    <x:Arguments>
+                        <x:String>Xamarin.ListViewHasNoHighlightEffect</x:String>
+                    </x:Arguments>
+                </Effect>
+            </ListView.Effects>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label
+                                Margin="10,0,0,0"
+                                FontSize="Large"
+                                Text="{Binding}"
+                                TextColor="#0078D7"
+                                VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
